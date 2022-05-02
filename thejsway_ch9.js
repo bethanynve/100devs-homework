@@ -93,3 +93,29 @@
 
 // Account list
 
+class Account {
+    constructor(name, balance) {
+        this.name = name;
+        this.balance = 0;
+    }
+    credit(value) {
+        return this.balance += value;
+    }
+    describe() {
+        return `The bank account belonging to ${this.name} has a balance of ${this.balance}.`;
+    }
+}
+
+const sean = new Account("Sean", 0);
+const brad = new Account("Brad", 0);
+const georges = new Account("Georges", 0);
+
+sean.credit(1000);
+brad.credit(1000);
+georges.credit(1000);
+
+console.log(sean.describe());
+console.log(brad.describe());
+console.log(georges.describe());
+
+ 
